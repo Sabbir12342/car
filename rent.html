@@ -44,7 +44,7 @@
                 <input type="number" name="Driver Commission" placeholder="Driver Commission">
             </label>
             <label for="due">Due<br>
-                <input type="text" name="Due" placeholder="Due Amount">
+                <input type="number" name="Due" placeholder="Due Amount">
             </label>
             <label for="note">Received Amount<br>
                 <input type="number" name="Received Amount" placeholder="Received Amount">
@@ -52,7 +52,10 @@
             <label for="note">note<br>
                 <input type="text" name="Note" placeholder="Note">
             </label>
-            <input type="submit" value="Submit" name="Submit" class="submit" onclick="submitform()">
+            <div>
+                <input type="reset" value="Reset" class="submit" id="button">
+                <input type="submit" value="Submit" name="Submit" class="submit" id="button">
+            </div>
         </form>
     </div>
     <script>
