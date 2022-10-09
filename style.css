@@ -22,6 +22,19 @@ label{
     cursor: pointer;
     margin: auto;
 }
+/* navigation menu */
+nav{
+    float: right;
+}
+li{
+    display: inline;
+}
+li a{
+    text-decoration: none;
+    color: white;
+    padding: 0 10px;
+    text-transform: capitalize;
+}
 /* daily rent */
 .rent{
    
