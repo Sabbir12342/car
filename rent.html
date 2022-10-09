@@ -8,26 +8,45 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="" id="daily-rent">
-        <label for="date" class="capitalize">date <br>
-            <input type="date" name="Date" placeholder="Date">
-        </label>
-        <label for="name">name<br>
-            <input type="text" name="Name" placeholder="Full Name">
-        </label>
-        <label for="amount">total amount<br>
-            <input type="number" name="Total Amount" placeholder="Total Amount">
-        </label>
-        <label for="gas">gas<br>
-            <input type="number" name="Gas" placeholder="Gas/Oil">
-        </label>
-        <label for="commission">Driver Commission<br>
-            <input type="number" name="Driver Commission" placeholder="Driver Commission">
-        </label>
-        <label for="note">note<br>
-            <input type="text" name="note" placeholder="Note">
-        </label>
-        <input type="submit" value="Submit" name="Submit" class="submit">
-    </form>
+    <div class="rent">
+        <form action="" method="post" id="daily-rent" name="google-sheet">
+            <label for="date" class="capitalize">date <br>
+                <input type="date" name="Date" placeholder="Date">
+            </label>
+            <label for="name">name<br>
+                <input type="text" name="Name" placeholder="Full Name">
+            </label>
+            <label for="amount">total amount<br>
+                <input type="number" name="Total Amount" placeholder="Total Amount">
+            </label>
+            <label for="gas">gas<br>
+                <input type="number" name="Gas" placeholder="Gas/Oil">
+            </label>
+            <label for="commission">Driver Commission<br>
+                <input type="number" name="Driver Commission" placeholder="Driver Commission">
+            </label>
+            <label for="due">Due<br>
+                <input type="text" name="Due" placeholder="Due Amount">
+            </label>
+            <label for="note">Received Amount<br>
+                <input type="number" name="Received Amount" placeholder="Received Amount">
+            </label>
+            <label for="note">note<br>
+                <input type="text" name="Note" placeholder="Note">
+            </label>
+            <input type="submit" value="Submit" name="Submit" class="submit" onclick="submitform()">
+        </form>
+    </div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxn3QgZ2Ls7qeZWARW5SoeM7IWXukseDWoB3xGFMuZu3ftYZF67YOUOOkZ3ZEAtw3Iw/exec'
+        const form = document.forms['google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 </body>
 </html>
