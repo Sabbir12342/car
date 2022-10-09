@@ -23,6 +23,11 @@ label{
     margin: auto;
 }
 /* navigation menu */
+
+header{
+    border: 3px solid;
+    min-height: 70px;
+}
 nav{
     float: right;
 }
