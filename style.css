@@ -15,12 +15,18 @@ label{
     background-image: linear-gradient(90deg, orange, tomato);
     border: none;
     border-radius: 4px;
-    padding: 5px;
+    padding: 20px;
     font-size: 25px;
     color: white;
     text-align: center;
     cursor: pointer;
     margin: auto;
+    position: relative;
+        left: 110px;
+}
+
+#button{
+    
 }
 /* navigation menu */
 
